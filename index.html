@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAV Manager</title>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>SAV Manager</h1>
+        </header>
+        <main>
+            <div id="formulaire-selection">
+                <h2>Nouveau ticket</h2>
+                <form id="form-ticket">
+                    <input type="text" id="client" placeholder="Nom du client" />
+                    <input type="text" id="probleme" placeholder="Description du problème" />
+                    <button type="submit">Créer le ticket</button>
+                </form>
+            </div>
+            <div id="liste-section">
+                <h2>Liste des tickets</h2>
+                <!--liste ici-->
+            </div>
+        </main>
+    </div>
+    <script>
+        const form = document.getElementById('form-ticket');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const client = document.getElementById('client').value;
+            const probleme = document.getElementById('probleme').value;
+
+            console.log('Nouveauc ticket :',client, probleme);
+          });  
+    </script>
+</body>
+</html>
